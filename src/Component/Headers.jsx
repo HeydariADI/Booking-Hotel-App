@@ -1,13 +1,18 @@
 import {MdLocationOn} from "react-icons/md"
 import {HiCalendar, HiSearch} from "react-icons/hi"
+import { useState } from "react"
 
 function Headers() {
+    const [destination , setDestination] = useState("");
   return (
     <div className="header">
         <div className="headerSearch">
             <div className="headerSearchItem">
                 <MdLocationOn className="headerIcon locationIcon"/>
-                <input type="text"
+                <input
+                value={destination}
+                onChange={(e) => setDestination(e.target.value)}
+                 type="text"
                  placeholder="Where to go?" 
                  className="headerSearchInput" 
                  name="destination"  
