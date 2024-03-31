@@ -30,6 +30,7 @@ function Headers() {
                 <div id="optionDropDown" onClick={()=>setOpenOptions(!openOptions)}>
                     1 adult &bull; 2 children &bull; 1 room
                 </div>
+                {openOptions && <GuestOptionsList />}
             <span className="seperator"></span>
             </div>
             <div className="headerSearchItem">
@@ -40,7 +41,26 @@ function Headers() {
 
         </div>
     </div>
-  )
+  );
 }
 
-export default Headers
+export default Headers;
+
+function GuestOptionsList() {
+
+    return(
+        <div className="guestOptions">
+        <div className="guestOptionItem">
+            <span className="optionText">Adult</span>
+            <div className="optionCounter">
+                <button className="optionCounterBtn">-</button>
+                <span className="optionCounterNumber">2</span>
+                <button className="optionCounterBtn">+</button>
+            </div>
+        </div>
+    </div>
+
+    )
+  
+    
+}
