@@ -4,6 +4,7 @@ import { useState } from "react"
 
 function Headers() {
     const [destination , setDestination] = useState("");
+    const [openOptions,setOpenOptions] = useState(false);
   return (
     <div className="header">
         <div className="headerSearch">
@@ -26,7 +27,7 @@ function Headers() {
                 <span className="seperator"></span>
             </div>
             <div className="headerSearchItem">
-                <div id="optionDropDown">
+                <div id="optionDropDown" onClick={()=>setOpenOptions(!openOptions)}>
                     1 adult &bull; 2 children &bull; 1 room
                 </div>
             <span className="seperator"></span>
