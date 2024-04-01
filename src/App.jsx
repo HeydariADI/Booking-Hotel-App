@@ -1,12 +1,14 @@
 
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import Headers from "./Component/Headers";
+import Header from "./Component/Header";
+import LocationList from "./Component/LocationList";
 function App() {
   return (
     <div>
       <Toaster/>
-      <Headers/>
+      <Header/>
+      <LocationList/>
     </div>
   )
 
