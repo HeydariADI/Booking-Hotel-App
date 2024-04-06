@@ -14,7 +14,7 @@ function Hotels() {
   const {isLoading,data} = useFetch("http://localhost:5000/hotels",
   `host_location_like=${destination || ""}&name_like${destination || ""}&accommodates_gte=${room || 1}`
   //  `q=${destination || ""}&accommodates_gte=${room || 1}}`
-   //name_like,host_location_like
+   
     );
 
     if(isLoading) <Loader/>;
