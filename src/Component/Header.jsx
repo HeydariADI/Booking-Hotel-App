@@ -9,7 +9,8 @@ import { format } from "date-fns";
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
 
 function Headers() {
-    const [destination , setDestination] = useState("");
+    const [searchParams,setSearchParams] = useSearchParams();
+    const [destination , setDestination] = useState(searchParams.get("destination"));
     const [openOptions,setOpenOptions] = useState(false);
     const [options,setoptions] = useState ({
         adult : 1,
@@ -26,7 +27,7 @@ function Headers() {
     ]);
     const[opendate,setOpenDate] = useState(false);
     const navigate = useNavigate();
-    const [searchParams,setSearchParams] = useSearchParams();
+    
 
 
 const handleOptions = (name,operation) => {
