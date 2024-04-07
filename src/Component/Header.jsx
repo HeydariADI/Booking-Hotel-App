@@ -58,13 +58,14 @@ const handleSearch = ()=>{
             <div className="headerSearchItem">
                 <MdLocationOn className="headerIcon locationIcon"/>
                 <input
-                value={destination}
-                onChange={(e) => setDestination(e.target.value)}
-                 type="text"
-                 placeholder="Where to go?" 
-                 className="headerSearchInput" 
-                 name="destination"  
-                 id="destination"/>
+            value={destination}
+            onChange={(e) => setDestination(e.target.value)}
+            type="text"
+            placeholder="where to go?"
+            className="headerSearchInput"
+            name="destination"
+            id="destination"
+          />
                  <span className="seperator"></span>
                 
             </div>
